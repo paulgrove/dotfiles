@@ -12,6 +12,7 @@
     ~/.tmux.conf: .tmux.conf
     ~/.vimrc: .config/nvim/init.vim
     ~/.zshrc: .zshrc
+    ~/.bashrc: .bashrc
     ~/.fonts: .fonts
     ~/.oh-my-zsh: .oh-my-zsh
     ~/.config/nvim: .config/nvim
