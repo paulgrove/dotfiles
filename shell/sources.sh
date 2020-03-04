@@ -5,4 +5,4 @@ try_source () {
 }
 
 try_source /etc/profile.d/apps-bin-path.sh
-try_source $HOME/.dot-files/shell/paths.sh
+try_source $HOME/.dotfiles/shell/paths.sh

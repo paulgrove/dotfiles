@@ -9,4 +9,4 @@ set -e
 #	certutil -N -d sql:$HOME/.pki/nssdb;
 #fi
 #
-#find $HOME/.dot-files/certs -type f -exec sudo certutil -d sql:.pki/nssdb -A -t "CT,c,c" -n {} -i {} \;
+#find $HOME/.dotfiles/certs -type f -exec sudo certutil -d sql:.pki/nssdb -A -t "CT,c,c" -n {} -i {} \;
