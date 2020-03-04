@@ -1,0 +1,10 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =8
+let g:netrw_dirhist_1='/home/pgrove839/git/assistlive/AssistLive/frontend'
+let g:netrw_dirhist_2='/home/pgrove839/git/assistlive/AssistLive/frontend/js'
+let g:netrw_dirhist_3='/home/pgrove839/git/assistlive/AssistLive/frontend/js/views'
+let g:netrw_dirhist_4='/home/pgrove839/git/assistlive/AssistLive/frontend/js/views/contracts'
+let g:netrw_dirhist_5='/home/pgrove839/git/assistlive/AssistLive/frontend/js/views/contracts/list'
+let g:netrw_dirhist_6='/home/pgrove839/git/assistlive/AssistLive/frontend/js/views/tickets/list'
+let g:netrw_dirhist_7='/home/pgrove839/Downloads'
+let g:netrw_dirhist_8='/home/pgrove839/.dot-files/os-install-scripts/Ubuntu Linux/base-desktop'

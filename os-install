@@ -1,0 +1,13 @@
+#!/bin/bash
+
+set -e
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
+
+source $DIR/nvm/nvm.sh
+
+nvm install 'lts/*'
+
+npm ci
+
+node lib/run-os-scripts.js $DIR/os-install-scripts
