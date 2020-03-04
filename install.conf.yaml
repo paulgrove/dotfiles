@@ -17,3 +17,4 @@
     ~/.config/nvim: .config/nvim
     ~/.config/leftwm: .config/leftwm
     ~/.dot-files/.oh-my-zsh/themes/powerlevel10k: zsh-themes/powerlevel10k
+    ~/.dot-files/.oh-my-zsh/plugins/zsh-syntax-highlighting: zsh-plugins/zsh-syntax-highlighting
