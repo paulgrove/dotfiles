@@ -2,7 +2,7 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/home/pgrove839/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 zstyle :omz:plugins:ssh-agent agent-forwarding on
 
@@ -142,6 +142,6 @@ export EDITOR='nvim'
 
 #alias kubectl="microk8s.kubectl --kubeconfig=$HOME/.kube/config"
 
-source $HOME/.dot-files/shell/sources.sh
+source $HOME/.dotfiles/shell/sources.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
