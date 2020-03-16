@@ -4,7 +4,13 @@ set -e
 
 DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 
-source $DIR/nvm/nvm.sh
+[ ! -d $HOME/.nvm ] && wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.2/install.sh | bash
+
+#if [ ! -L $HOME/.nvm ]; then
+#	ln -s $DIR/nvm $HOME/.nvm
+#fi
+
+source $HOME/.nvm/nvm.sh
 
 nvm install 'lts/*'
 

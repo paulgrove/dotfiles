@@ -35,6 +35,7 @@ set updatetime=100
 "autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd VimResized * exec "normal \<C-w>="
 
+
 autocmd BufEnter vue :syntax sync fromstart
 
 "if &term =~ "xterm\\|rxvt"
@@ -72,43 +73,70 @@ Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'gcmt/taboo.vim'
 Plug 'wikitopian/hardmode'
-Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer --tern-completer --go-completer' }
-Plug 'vim-scripts/taglist.vim'
+"Plug 'Valloric/YouCompleteMe', { 'do': './install.sh --clang-completer --tern-completer --go-completer' }
+"Plug 'vim-scripts/taglist.vim'
 Plug 'jlanzarotta/bufexplorer'
 "Plug 'altercation/vim-colors-solarized'
 Plug 'iCyMind/NeoSolarized'
 Plug 'pangloss/vim-javascript'
-Plug 'Shougo/neomru.vim'
+"Plug 'Shougo/neomru.vim'
 "Plug 'Shougo/unite.vim'
-Plug 'Shougo/vimproc.vim', { 'do': 'make' }
-Plug 'kchmck/vim-coffee-script'
-Plug 'tpope/vim-fugitive'
-Plug 'tpope/vim-git'
+"Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+"Plug 'kchmck/vim-coffee-script'
+"Plug 'tpope/vim-fugitive'
+"Plug 'tpope/vim-git'
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
-Plug 'mhinz/vim-startify'
-Plug 'tpope/vim-dispatch'
-Plug 'radenling/vim-dispatch-neovim'
-Plug 'ton/vim-bufsurf'
+"Plug 'SirVer/ultisnips'
+"Plug 'honza/vim-snippets'
+"Plug 'mhinz/vim-startify'
+"Plug 'tpope/vim-dispatch'
+"Plug 'radenling/vim-dispatch-neovim'
+"Plug 'ton/vim-bufsurf'
 "Plug 'Rename'
-Plug 'w0rp/ale'
-Plug 'posva/vim-vue'
+"Plug 'w0rp/ale'
+"Plug 'posva/vim-vue'
 " For AngluarJS/Typescript
-Plug 'leafgarland/typescript-vim'
-Plug 'Quramy/vim-js-pretty-template'
+"Plug 'leafgarland/typescript-vim'
+"Plug 'Quramy/vim-js-pretty-template'
 Plug 'jason0x43/vim-js-indent'
-Plug 'Quramy/vim-dtsm'
-Plug 'mhartington/vim-typings'
-Plug 'Quramy/tsuquyomi'
+"Plug 'Quramy/vim-dtsm'
+"Plug 'mhartington/vim-typings'
+"Plug 'Quramy/tsuquyomi'
 "
-Plug 'kylef/apiblueprint.vim'
-Plug 'majutsushi/tagbar'
-Plug 'apiaryio/drafter'
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+"Plug 'kylef/apiblueprint.vim'
+"Plug 'majutsushi/tagbar'
+"Plug 'apiaryio/drafter'
+"Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+
+Plug 'autozimu/LanguageClient-neovim', {
+    \ 'branch': 'next',
+    \ 'do': 'bash install.sh',
+    \ }
+
 call plug#end()
+
+let g:LanguageClient_serverCommands = {
+    \ 'javascript': ['javascript-typescript-stdio'],
+    \ }
+
+"    \ 'rust': ['~/.cargo/bin/rustup', 'run', 'stable', 'rls'],
+"    \ 'javascript.jsx': ['tcp://127.0.0.1:2089'],
+"    \ 'python': ['/usr/local/bin/pyls'],
+"    \ 'ruby': ['~/.rbenv/shims/solargraph', 'stdio'],
+"    \ 'typescript': ['javascript-typescript-stdio'],
+
+function LC_maps()
+  if has_key(g:LanguageClient_serverCommands, &filetype)
+	nnoremap <F5> :call LanguageClient_contextMenu()<CR>
+	nnoremap <buffer> <silent> K :call LanguageClient#textDocument_hover()<cr>
+	nnoremap <buffer> <silent> gd :call LanguageClient#textDocument_definition()<CR>
+	nnoremap <buffer> <silent> <F2> :call LanguageClient#textDocument_rename()<CR>
+  endif
+endfunction
+
+autocmd FileType * call LC_maps()
 
 let g:ale_fixers = {
 \   'javascript': ['eslint'],
