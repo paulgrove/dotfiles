@@ -118,4 +118,4 @@ fi
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
-source ~/.dot-files/shell/sources.sh
+source ~/.dotfiles/shell/sources.sh
