@@ -14,6 +14,7 @@
     ~/.zshrc: .zshrc
     ~/.bashrc: .bashrc
     ~/.fonts: .fonts
+    ~/.icons: .icons
     ~/.fzf: fzf
     ~/.oh-my-zsh: .oh-my-zsh
     ~/.config/nvim: .config/nvim
