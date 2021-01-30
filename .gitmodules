@@ -24,3 +24,6 @@
 [submodule "tmux"]
 	path = tmux
 	url = https://github.com/tmux/tmux.git
+[submodule ".icons/candy-icons"]
+	path = .icons/candy-icons
+	url = https://github.com/EliverLara/candy-icons.git
