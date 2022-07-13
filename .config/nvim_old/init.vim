@@ -100,6 +100,7 @@ if !exists('g:vcode')
 	"Plug 'posva/vim-vue'
 	" For AngluarJS/Typescript
 	Plug 'leafgarland/typescript-vim'
+	"Plug 'codota/tabnine-vim'
 	"Plug 'Quramy/vim-js-pretty-template'
 	"Plug 'jason0x43/vim-js-indent'
 	"Plug 'Quramy/vim-dtsm'
@@ -294,8 +295,8 @@ if !exists('g:vcode')
 
 	" YouCompleteMe "
 
-	let g:ycm_collect_identifiers_from_tags_files = 1
-	let g:ycm_always_populate_location_list = 1
+	"let g:ycm_collect_identifiers_from_tags_files = 1
+	"let g:ycm_always_populate_location_list = 1
 
 	" UtilSnips "
 

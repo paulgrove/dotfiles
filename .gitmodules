@@ -27,3 +27,6 @@
 [submodule ".icons/candy-icons"]
 	path = .icons/candy-icons
 	url = https://github.com/EliverLara/candy-icons.git
+[submodule ".config/nvim"]
+	path = .config/nvim
+	url = https://github.com/NvChad/NvChad

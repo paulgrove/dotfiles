@@ -84,7 +84,7 @@ plugins=(
 	gitfast
 	vagrant
 	tmux
-	ssh-agent
+#	ssh-agent
 	npm
 	golang
 	fzf
@@ -145,3 +145,5 @@ export EDITOR='nvim'
 source $HOME/.dotfiles/shell/sources.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export PATH="$HOME/.poetry/bin:$PATH"
