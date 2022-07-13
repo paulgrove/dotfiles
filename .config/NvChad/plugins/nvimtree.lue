@@ -1,0 +1,14 @@
+local M = {}
+
+M.treesitter = {
+   renderer = {
+      icons = {
+         show = {
+            git = true,
+            folder = false
+         }
+      }
+   }
+};
+
+return M
